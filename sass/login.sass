@@ -1,0 +1,86 @@
+@import "compass/css3/transform"
+
+$mainColor: darkred
+$secondColor: black
+
+body
+  background: black url(../img/lebron-james.jpg) no-repeat
+  background-size: cover
+  background-position: right
+  background-origin: border-box
+  height: 100vh
+
+.container
+  @media (min-width: 768px)
+    position: absolute
+    left: 50%
+    top: 50%
+    @include translate( -50%, -50%)
+
+.social
+  text-align: center
+  padding-top: 20px
+
+.form-signin
+  color: $mainColor
+  max-width: 330px
+  padding: 15px
+  margin: 0 auto
+
+h2.form-signin-heading
+  text-shadow: 5px 0px 3px black
+  color: #ffffff
+  font-size: 2.5rem
+
+  @media (min-width: 768px)
+    color: #ffffff
+    font-size: 30px
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox
+  margin-bottom: 10px
+
+.form-signin .checkbox
+  font-weight: normal
+
+.form-signin .form-control
+  background: rgba(0, 0, 0, 0)
+  position: relative
+  font-size: 16px
+  height: auto
+  padding: 10px
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  border: 0
+
+
+.form-signin .form-control:focus
+  z-index: 2
+
+.form-signin input[type="text"]
+  margin-bottom: -1px
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+
+.form-signin input[type="password"]
+  margin-bottom: 10px
+  border-top-left-radius: 0
+  border-top-right-radius: 0
+
+.form-signin .btn-primary
+  background: $mainColor
+  border: 1px $mainColor solid
+  &:hover
+    background: $secondColor
+    color: $mainColor
+
+.form-control:focus
+  border-color: $mainColor
+  outline: 0
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px opacify($mainColor, 0.60)
+  box-shadow: inset 0 1px 1px opacify($mainColor, 0.75), 0 0 8px opacify($mainColor, 0.60)
+
+
+
+@import "webicons"
